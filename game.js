@@ -57,5 +57,16 @@ update();
 draw();
 
 requestAnimationFrame(loop);
+drawMap(ctx);
 
+camera.x = player.x - canvas.width / 2;
+camera.y = player.y - canvas.height / 2;
+
+ctx.fillStyle = "green";
+ctx.fillRect(
+    player.x - camera.x,
+    player.y - camera.y,
+    32,
+    32
+);
 }
