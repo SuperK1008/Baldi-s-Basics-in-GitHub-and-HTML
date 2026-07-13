@@ -3,7 +3,10 @@ const title=document.getElementById("titleScreen");
 const game=document.getElementById("game");
 const canvas=document.getElementById("canvas");
 const ctx=canvas.getContext("2d");
-
+const camera = {
+    x: 0,
+    y: 0
+};
 canvas.width=window.innerWidth;
 canvas.height=window.innerHeight;
 
@@ -44,7 +47,7 @@ ctx.fillRect(0,0,canvas.width,canvas.height);
 
 ctx.fillStyle="green";
 ctx.fillRect(player.x,player.y,32,32);
-
+loadMap();
 }
 
 function loop(){
